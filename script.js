@@ -32,22 +32,22 @@ var WORDS = [
     "etana", "elokuva",
     "faarao", "farkut",
     "gerbiili", "gorilla",
-    "haarukka", "halla", "hattara", "helle", "helistin", "hömppä", "höpsö",
+    "haarukka", "halla", "hattara", "helle", "helistin", "hömppä", "höpsö","hanna",
     "ilta", "imuri", "intiaani", "isi", "iskä",
     "jekku", "jalkapallo", "jakkara", "jukurtti", "ju-na", "jänis", "jäätelö",
     "kakku", "kameli", "karkki", "kello", "kivi", "kiivi", "kilpikonna", "kuppi", "karhu", "koira", "käärme", "kala",
-        "kana", "kesä", "kevät", "kännykkä",
-    "lamppu", "lapsi", "lasi", "lautanen", "leijona", "leikki", "lentokone", "liukumäki", "lyhty", "lintu",
+    "kana", "kesä", "kevät", "kännykkä", "koko",
+    "lamppu", "lapsi", "lasi", "lautanen", "leijona", "leikki", "lentokone", "liukumäki", "lyhty", "lintu", "logo",
     "mi-ke", "makkara", "makarooni", "mopo", "myyrä", "muurahainen", "möhköfantti", "mörkö",
     "naru", "nökö", "nalle", "nakupelle", "nenä", "norsu", "näk'käri",
-    "orava", "omena",
-    "paloauto", "parkkipaikka", "piirakka", "piimä", "pilli", "poliisi", "potta", "puuro", "pöytä", "papukaija",
+    "orava", "omena", "okko", "oja",
+    "peppi pitkätossu", "paloauto", "parkkipaikka", "piirakka", "piimä", "pilli", "poliisi", "potta", "puuro", "pöytä", "papukaija",
     "quesadilla",
     "rusina", "raketti",
     "salaatti", "sauna", "sininen", "sipuli", "soittopeli", "suihku", "syksy",
-    "taika", "talvi", "takka", "talvi", "tarra", "telkkari", "tietokone", "tikkari", "timantti", "trampoliini",
+    "taika", "talvi", "takka", "talvi", "tarra", "telkkari", "tietokone", "tikkari", "timantti", "trampoliini", "tyyny",
     "uimahousut",
-    "veitsi", "västäräkki", "voltti",
+    "veitsi", "västäräkki", "voltti", "vilja", "varpu", "valkeapää", "vegepöni",
     "watti",
     "yö",
     "zumba",
@@ -151,4 +151,14 @@ function sayWordForCharacter(character) {
     utterThis.pitch = 1;
     utterThis.rate = 0.9;
     synth.speak(utterThis);
+}
+
+
+function puhu(a, b) {
+  var laske = a + '+' + b + ' on ' + (a+b);
+  var utterThis = new SpeechSynthesisUtterance(laske);
+  utterThis.voice = voice;
+  utterThis.pitch = 1;
+  utterThis.rate = 0.9;
+  synth.speak(utterThis);
 }
