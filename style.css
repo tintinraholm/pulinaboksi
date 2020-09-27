@@ -42,3 +42,8 @@ body {
 .successfully-used {
     opacity: 0;
 }
+
+#speak-input {
+    width: 40%;
+    margin: auto;
+}
