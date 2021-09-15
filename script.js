@@ -38,7 +38,7 @@ var WORDS = [
     "kakku", "kameli", "karkki", "kello", "kivi", "kiivi", "kilpikonna", "kuppi", "karhu", "koira", "käärme", "kala",
     "kana", "kesä", "kevät", "kirsikka", "koko", "kumi", "kännykkä",
     "lamppu", "lapsi", "lasi", "lautanen", "leijona", "leikki", "lentokone", "liukumäki", "lohi", "lohikäärme", "lyhty", "lintu", "logo",
-    "makkara", "mansikka", "makarooni", "mulan", "mopo", "myyrä", "muurahainen", "möhköfantti", "mörkö",
+    "makkara", "mansikka", "makarooni", "mulan", "mopo", "myyrä", "muurahainen", "möhköfantti", "mörkö","mamma",
     "naru", "nökö", "nalle", "nakupelle", "nenä", "norsu", "näk'käri",
     "orava", "omena", "okko", "oja",
     "peppi pitkätossu", "paloauto", "parkkipaikka", "puhekupla", "piirakka", "piimä", "pilli", "poliisi", "potta", "puuro", "pöytä", "papukaija", "puhelin", "pizza",
