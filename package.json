@@ -8,5 +8,8 @@
     "@html-eslint/parser": "^0.46.2",
     "eslint": "^9.36.0",
     "globals": "^16.4.0"
+  },
+  "scripts": {
+    "lint": "NODE_OPTIONS=--max_old_space_size=4096 node ./node_modules/eslint/bin/eslint.js --fix ."
   }
 }
