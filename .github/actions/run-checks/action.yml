@@ -1,0 +1,43 @@
+name: Run checks
+description: Runs lint and tests
+strategy:
+  matrix:
+    node-version: [18.x, 20.x, 22.x]
+    # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Enable Corepack
+      shell: bash
+      run: corepack enable
+    - uses: actions/setup-node@v5
+      with:
+        node-version-file: .nvmrc
+        cache: 'yarn'
+    - name: Install dependencies
+      shell: bash
+      run: yarn --immutable
+    - name: Lint
+      shell: bash
+      run: yarn lint
+    - name: Type check
+      shell: bash
+      run: yarn build
+    # - name: Start environment
+    #   shell: bash
+    #   run: docker compose up -d
+    # - name: Run tests
+    #   shell: bash
+    #   run: yarn test
+    # - name: Save logs if tests fail
+    #   if: failure()
+    #   shell: bash
+    #   run: docker compose logs --no-color --timestamps > docker.log
+    # - name: Upload logs if tests fail
+    #   if: failure()
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: logs
+    #     path: '*.log'
+    #     retention-days: 1

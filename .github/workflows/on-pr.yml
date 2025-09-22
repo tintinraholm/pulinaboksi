@@ -1,0 +1,17 @@
+name: On PR
+on:
+  pull_request: {}
+permissions:
+  actions: write
+  contents: read
+  id-token: write
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  run-checks:
+    name: Run checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/run-checks
