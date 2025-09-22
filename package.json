@@ -1,0 +1,8 @@
+{
+  "name": "pulinaboksi",
+  "packageManager": "yarn@4.9.1",
+  "dependencies": {
+    "@html-eslint/eslint-plugin": "^0.46.2",
+    "eslint": "^9.36.0"
+  }
+}
